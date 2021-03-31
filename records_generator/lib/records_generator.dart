@@ -1,7 +1,11 @@
 library records_generator;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+import 'package:build/build.dart';
+import 'package:records_generator/src/config.dart';
+import 'package:records_generator/src/generator.dart';
+import 'package:source_gen/source_gen.dart';
+
+Builder records_generator(BuilderOptions options) => LibraryBuilder(
+      RecordGenerator(),
+      generatedExtension: generated_file_extension,
+    );

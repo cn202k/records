@@ -13,6 +13,8 @@ dependencies:
   code_builder: ^3.6.0
   dart_style: ">=1.3.0 <1.4.0"
   analyzer: ">=0.40.0 <0.41.0"
+  records: ^0.0.0
+dependency_overrides:
   records:
     path: ../records
 

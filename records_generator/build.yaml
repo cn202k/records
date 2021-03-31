@@ -1,0 +1,14 @@
+targets:
+  $default:
+    builders:
+      records|records_generator:
+        enabled: true
+
+builders:
+  records:
+    import: "package:records_generator/records_generator.dart"
+    builder_factories: ["records_generator"]
+    build_extensions: {".dart": [".d.dart"]}
+    auto_apply: dependents
+    build_to: source 
+    applies_builders: ["source_gen|combining_builder"]
